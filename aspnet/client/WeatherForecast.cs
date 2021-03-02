@@ -1,6 +1,6 @@
 using System;
 
-namespace aspnet
+namespace client
 {
     public class WeatherForecast
     {
