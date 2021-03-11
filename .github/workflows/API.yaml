@@ -23,7 +23,7 @@ jobs:
       DOCKER_USER: ${{ secrets.DOCKER_USER }}
     steps:
       - uses: actions/checkout@v2
-      - run: echo $DOCKER_TOKEN | winpty docker login -u $DOCKER_USER --password-stdin
+      - run: echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
       - run: docker image build -f ../Dockerfile -t lastest ..
       - run: docker tag latest $DOCKER_USER/webapi
       - run: docker tag latest $DOCKER_USER/webapi:latest
