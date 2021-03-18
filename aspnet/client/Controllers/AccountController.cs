@@ -19,7 +19,7 @@ namespace client.Controllers
             this.UnitOfWork = unitOfWork;
         }
 
-        [HttpGet("[action]/{id}")]
+        [HttpGet("[action]/{email}")]
         public IActionResult Get(string email)
         {
             System.Console.WriteLine("Calling AccountController Get");
