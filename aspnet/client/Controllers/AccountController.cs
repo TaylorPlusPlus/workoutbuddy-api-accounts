@@ -7,7 +7,7 @@ namespace client.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    class AccountController : ControllerBase
+    public class AccountController : ControllerBase
     {
         //Use the unit of work repo
         UnitOfWork UnitOfWork;
