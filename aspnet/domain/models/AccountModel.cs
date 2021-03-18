@@ -5,10 +5,10 @@ namespace domain.models
 {
     public class AccountModel : AEntity
     {
-        private string Email;
-        private string FirstName;
-        private string LastName;
-        private DateTime DateJoined;
+        public string Email {get; set;}
+        public string FirstName {get; set;}
+        public string LastName {get;set;}
+        public DateTime DateJoined {get;set;}
         
     }
 }
