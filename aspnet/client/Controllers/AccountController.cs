@@ -19,13 +19,6 @@ namespace client.Controllers
             this.UnitOfWork = unitOfWork;
         }
 
-         public IActionResult Get()
-        {
-            
-            return Ok("Hello!");
-        }
-
-
         [HttpGet("[action]/{email}")]
         public IActionResult Get(string email)
         {
