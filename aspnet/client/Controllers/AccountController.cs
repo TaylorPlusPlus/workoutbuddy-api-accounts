@@ -24,8 +24,9 @@ namespace client.Controllers
         {
             System.Console.WriteLine("Calling AccountController Get");
             AccountModel Account = UnitOfWork.AccountRepo.Get(email);
+            string testString = "Account = " + Account + " Account.Firstname = " + Account.FirstName + " Email = " + email;
             // use the repo
-            return Ok("Hello!");
+            return Ok(testString);
         }
     }
 }
