@@ -26,7 +26,7 @@ namespace client.Controllers
             AccountModel Account = UnitOfWork.AccountRepo.Get(email);
             string testString = " Email = " + email;
             // use the repo
-            return Ok(testString);
+            return Ok("It can get here Alright?!?!");
         }
     }
 }
