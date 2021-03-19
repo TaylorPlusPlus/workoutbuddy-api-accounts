@@ -27,7 +27,7 @@ namespace client.Controllers
             string testString = " Email = " + email;
             // use the repo
             var inc  = email;
-            return Ok(inc);
+            return Ok(Account);
         }
     }
 }
