@@ -27,6 +27,7 @@ namespace client.Controllers
             string testString = " Email = " + email;
             // use the repo
             var inc  = email;
+            System.Console.WriteLine("Get called");
             return Ok(Account);
         }
     }
