@@ -29,5 +29,11 @@ namespace client.Controllers
             var inc  = email;
             return Ok(Account);
         }
+
+        [HttpGet("[action]")]
+        public IActionResult Test()
+        {
+            return Ok("Everything Updated Fine");
+        }
     }
 }
