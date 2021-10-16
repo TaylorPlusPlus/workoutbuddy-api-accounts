@@ -42,6 +42,18 @@ namespace client
                     opts.EnableRetryOnFailure(2);
                 });
             });
+
+             services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:4200",
+                                            "http://www.contoso.com")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                    });
+            });
             
             services.AddScoped<UnitOfWork>();
         }
@@ -59,6 +71,8 @@ namespace client
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 
