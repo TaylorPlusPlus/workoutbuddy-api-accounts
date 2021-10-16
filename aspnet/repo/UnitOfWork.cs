@@ -9,6 +9,7 @@ namespace repo
 
         // collection of repos
         AccountRepo accountRepo;
+        CardRepo cardRepo;  
         // constructor with context injection
 
         public UnitOfWork(WorkOutBuddyContext db_context)
@@ -25,6 +26,18 @@ namespace repo
                     accountRepo = new AccountRepo(db_context);
                 }
                 return accountRepo;
+            }
+        }
+
+        public CardRepo CardRepo
+        {
+            get
+            {
+                if(cardRepo == null)
+                {
+                    cardRepo = new CardRepo(db_context);
+                }
+                return cardRepo;
             }
         }
         
